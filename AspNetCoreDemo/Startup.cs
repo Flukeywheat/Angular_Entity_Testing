@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
+using Microsoft.CodeAnalysis.Options;
 
 namespace AspNetCoreDemo
 {
@@ -28,6 +30,7 @@ namespace AspNetCoreDemo
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            
             services.AddDbContext<ClientContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DevConnection"))               
             );
