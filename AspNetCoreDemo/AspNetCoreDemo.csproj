@@ -34,10 +34,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\Login\Login.component.ts" />
     <None Remove="ClientApp\src\app\Sign-Up\Sign-Up.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\Login\Login.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\Sign-Up\Sign-Up.component.ts" />
   </ItemGroup>
 

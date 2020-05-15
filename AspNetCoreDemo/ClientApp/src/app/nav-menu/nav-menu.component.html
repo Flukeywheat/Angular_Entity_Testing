@@ -1,6 +1,6 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top"
   >
     <div class="container">
       <a class="navbar-brand" [routerLink]="['/']">AspNetCoreDemo</a>
@@ -28,18 +28,21 @@
           <!-- Needs Link  -->
           <!-- Needs Link  -->
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['Sign-Up']">Sign Up</a>
+            <a class="nav-link text-dark" [routerLink]="['/Sign-Up']">Industries</a>
           </li>
           <!-- Needs Link -->
           <!-- Needs Link -->
-          <li class="nav-item">
-            <a class="nav-link text-dark">Login</a>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/Login']">Products</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
+            <a class="nav-link text-dark" [routerLink]="['/counter']">Company</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
+            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Contact Us</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Support</a>
           </li>
         </ul>
       </div>
