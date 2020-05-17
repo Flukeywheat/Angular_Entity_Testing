@@ -24,26 +24,10 @@
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }">
             <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <!-- Needs Link  -->
-          <!-- Needs Link  -->
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/Sign-Up']">Industries</a>
-          </li>
-          <!-- Needs Link -->
-          <!-- Needs Link -->
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/Login']">Products</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']">Company</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Contact Us</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Support</a>
-          </li>
+          </li>          
+          <li *ngFor="let category of dropDownCategories">
+            <nav-nav-dropdown [Category]="category"></nav-nav-dropdown>
+          </li>           
         </ul>
       </div>
     </div>

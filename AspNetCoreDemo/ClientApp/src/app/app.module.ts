@@ -11,16 +11,19 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SignUpComponent } from "./Sign-Up/Sign-Up.component";
 import { LoginComponent } from "./Login/Login.component";
+import { NavDropDownComponent } from "./nav-menu/nav-dropdown/nav-dropdown.component"
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
+    NavDropDownComponent,
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +34,7 @@ import { LoginComponent } from "./Login/Login.component";
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: "Sign-Up", component: SignUpComponent},
-      { path: "Login", component: LoginComponent},
+      { path: "Login", component: LoginComponent }
     ])
   ],
   providers: [],
