@@ -10,6 +10,8 @@ export class NavDropDownComponent {
   @Input() Category: dropDownCategories;
   CatEnum = dropDownCategories;
 
+  IndustriesItemsPaceholder: Array<string> = ["Transit & Rail", "Paratransit"];
+
   constructor() {
     console.log(this.Category);
   }

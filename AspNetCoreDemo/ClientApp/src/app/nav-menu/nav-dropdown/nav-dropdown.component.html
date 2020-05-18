@@ -1,12 +1,12 @@
 <div [ngSwitch]="Category">
   <div class="dropdown" *ngSwitchCase="CatEnum.Industries">
-    <button class="nav-link dropdown-toggle text-dark" id="IndustryLabel" data-toggle="dropdown">
+    <button class="nav-link dropdown-toggle text-dark" id="IndustryDropDown" data-toggle="dropdown">
       Industries
     </button>
-    <ul class="dropdown-menu" aria-labelledby="IndustryLabel">
-      <li class="dropdown-item">tst</li>
-      <li class="dropdown-item">tst</li>
-      <li class="dropdown-item">tst</li>
+    <ul class="dropdown-menu" aria-labelledby="IndustryDropDown">
+      <li *ngFor="let IndustryItem of IndustriesItemsPaceholder">
+        <a>{{IndustryItem}}</a>
+      </li>
     </ul>
   </div>
   <div *ngSwitchCase="CatEnum.Products">
