@@ -13,7 +13,7 @@ namespace AspNetCoreDemo.Models.NavBarControls
 
         }
 
-        public DbSet<NavBarCategory> Clients { get; set; }
+        public DbSet<navBarCategory> Categories { get; set; }
     }
     
     public class NavBarDropDownItemContext : DbContext
@@ -23,6 +23,6 @@ namespace AspNetCoreDemo.Models.NavBarControls
 
         }
 
-        public DbSet<NavBarDropDownItem> Clients { get; set; }
+        public DbSet<navBarDropDownItem> Items { get; set; }
     }
 }

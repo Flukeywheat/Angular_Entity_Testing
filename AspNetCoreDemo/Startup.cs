@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 using Microsoft.CodeAnalysis.Options;
+using AspNetCoreDemo.Models.NavBarControls;
 
 namespace AspNetCoreDemo
 {
@@ -30,8 +31,7 @@ namespace AspNetCoreDemo
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            
-            services.AddDbContext<ClientContext>(options =>
+            services.AddDbContext<NavBarCategoryContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DevConnection"))               
             );
         }

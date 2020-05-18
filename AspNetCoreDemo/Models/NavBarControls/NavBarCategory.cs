@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreDemo.Models.NavBarControls
 {
-    public class NavBarCategory
+    public class navBarCategory
     {
-        [Key] private int NavBarCategoryId { get;  }
+        [Key] public int NavBarCategoryId { get; private set; }
 
         [Required] [Column(TypeName = "varchar (100)")]
-        private string Name { get;  }
+        public string Name { get; private set; }
 
-        private List<NavBarDropDownItem> DropDownItem { get; }
+        public List<navBarDropDownItem> DropDownItem { get; private set; }
 
     }
 
-    public class NavBarDropDownItem
+    public class navBarDropDownItem
     {
-        [Key] private int NavBarDropDownItemiD { get; }
+        [Key] public int NavBarDropDownItemiD { get; private set; }
 
         [Required]
         [Column(TypeName = "varchar (100)")]
-        private string Name { get;  }
+        public string Name { get; private set; }
         [Required]
         [Column(TypeName = "varchar (100)")]
-        private string relativePath { get; }
+        public string relativePath { get; private set; }
         [ForeignKey("NavBarCategory")]
-        private int NavBarCategoryId { get;}
+        public int NavBarCategoryId { get; private set; }
 
     }
 }
