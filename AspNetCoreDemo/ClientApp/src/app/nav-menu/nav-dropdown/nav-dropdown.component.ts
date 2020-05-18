@@ -8,6 +8,7 @@ import { dropDownCategories } from "../../Enums/Enums";
 })
 export class NavDropDownComponent {
   @Input() Category: dropDownCategories;
+  CatEnum = dropDownCategories;
 
   constructor() {
     console.log(this.Category);

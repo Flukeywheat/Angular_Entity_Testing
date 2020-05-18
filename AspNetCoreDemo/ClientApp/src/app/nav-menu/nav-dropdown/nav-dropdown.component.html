@@ -1,19 +1,25 @@
-<li class="nav-item">
-  <div [ngSwitch] = "Category">
-    <div *ngSwitchCase="0">
-      <a class="nav-link text-dark">Test</a>
-    </div>
-    <div *ngSwitchCase="1">
-      <a class="nav-link text-dark">Try</a>
-    </div>
-    <!--<div *ngSwitchCase="dropDownCategories">
-      <a class="nav-link text-dark">Test</a>
-    </div>
-    <div *ngSwitchCase="dropDownCategories">
-      <a class="nav-link text-dark">Test</a>
-    </div>
-    <div *ngSwitchCase="dropDownCategories">
-      <a class="nav-link text-dark">Test</a>
-    </div>-->
-   </div>
-</li>
+<div [ngSwitch]="Category">
+  <div class="dropdown" *ngSwitchCase="CatEnum.Industries">
+    <button class="nav-link dropdown-toggle text-dark" id="IndustryLabel" data-toggle="dropdown">
+      Industries
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="IndustryLabel">
+      <li class="dropdown-item">tst</li>
+      <li class="dropdown-item">tst</li>
+      <li class="dropdown-item">tst</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="CatEnum.Products">
+    <a class="nav-link text-dark">Products</a>
+  </div>
+  <div *ngSwitchCase="CatEnum.Company">
+    <a class="nav-link text-dark">Company</a>
+  </div>
+  <div *ngSwitchCase="CatEnum.Contact_Us">
+    <a class="nav-link text-dark">Contact Us</a>
+  </div>
+  <div *ngSwitchCase="CatEnum.Support">
+    <a class="nav-link text-dark">Support</a>
+  </div>
+</div>
+
