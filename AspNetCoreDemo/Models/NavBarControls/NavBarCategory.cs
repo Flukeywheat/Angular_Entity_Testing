@@ -15,7 +15,6 @@ namespace AspNetCoreDemo.Models.NavBarControls
         public string Name { get; private set; }
 
         public List<navBarDropDownItem> DropDownItem { get; private set; }
-
     }
 
     public class navBarDropDownItem

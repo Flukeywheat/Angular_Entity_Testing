@@ -15,6 +15,9 @@ namespace AspNetCoreDemo.Models.NavBarControls
 
         public DbSet<navBarCategory> Categories { get; set; }
     }
+
+
+    
     
     public class NavBarDropDownItemContext : DbContext
     {

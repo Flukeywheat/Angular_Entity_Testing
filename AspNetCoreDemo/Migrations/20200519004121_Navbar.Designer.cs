@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AspNetCoreDemo.Migrations
 {
     [DbContext(typeof(NavBarCategoryContext))]
-    [Migration("20200518184107_Navbar")]
+    [Migration("20200519004121_Navbar")]
     partial class Navbar
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
