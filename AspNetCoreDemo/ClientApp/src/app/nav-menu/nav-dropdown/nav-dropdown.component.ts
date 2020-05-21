@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { dropDownCategories } from "../../Enums/Enums";
+import { Component, Input, OnInit } from '@angular/core';
+import { NavBarCategory } from "../nav-menu.component";
 
 @Component({
   selector: 'nav-nav-dropdown',
@@ -7,12 +7,6 @@ import { dropDownCategories } from "../../Enums/Enums";
   styleUrls: ['./nav-dropdown.component.css'],
 })
 export class NavDropDownComponent {
-  @Input() Category: dropDownCategories;
-  CatEnum = dropDownCategories;
-
-  IndustriesItemsPaceholder: Array<string> = ["Transit & Rail", "Paratransit"];
-
-  constructor() {
-    console.log(this.Category);
-  }
+  @Input() Category: NavBarCategory;
+  isValid: Boolean = false;
 }

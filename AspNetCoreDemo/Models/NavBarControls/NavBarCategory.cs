@@ -14,7 +14,7 @@ namespace AspNetCoreDemo.Models.NavBarControls
         [Required] [Column(TypeName = "varchar (100)")]
         public string Name { get; private set; }
 
-        public List<navBarDropDownItem> DropDownItem { get; private set; }
+        public List<navBarDropDownItem> DropDownItem { get;  set; }
     }
 
     public class navBarDropDownItem

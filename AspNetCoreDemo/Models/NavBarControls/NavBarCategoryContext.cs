@@ -14,18 +14,12 @@ namespace AspNetCoreDemo.Models.NavBarControls
         }
 
         public DbSet<navBarCategory> Categories { get; set; }
+        public DbSet<navBarDropDownItem> navBarDropDownItem { get; set; }
+      
     }
 
 
     
     
-    public class NavBarDropDownItemContext : DbContext
-    {
-        public NavBarDropDownItemContext(DbContextOptions<NavBarDropDownItemContext> options) : base(options)
-        {
-
-        }
-
-        public DbSet<navBarDropDownItem> Items { get; set; }
-    }
+   
 }

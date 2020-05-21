@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { dropDownCategories } from "../Enums/Enums";
+import { Component, Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';;
 
 
 @Component({
@@ -9,9 +9,13 @@ import { dropDownCategories } from "../Enums/Enums";
 })
 export class NavMenuComponent {
   isExpanded = false;
-  dropDownCategories: Array<dropDownCategories> =
-    [dropDownCategories.Industries, dropDownCategories.Products, dropDownCategories.Company
-      , dropDownCategories.Contact_Us, dropDownCategories.Support];
+  public NavBarCategories: NavBarCategory[];
+
+  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    http.get<NavBarCategory[]>(baseUrl + 'navBarCategories').subscribe(result => {
+      this.NavBarCategories = result;
+    }, error => console.error(error));
+  }
 
   collapse() {
     this.isExpanded = false;
@@ -20,6 +24,12 @@ export class NavMenuComponent {
   toggle() {
     this.isExpanded = !this.isExpanded;
   }
+}
+
+export interface NavBarCategory {
+  navBarCategoryId: number;
+  name: string;
+  dropDownItem: Array<object>;
 }
 
 

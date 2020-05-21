@@ -25,8 +25,8 @@
               [routerLinkActiveOptions]="{ exact: true }">
             <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
           </li>          
-          <li *ngFor="let category of dropDownCategories">
-            <nav-nav-dropdown [Category]="category"></nav-nav-dropdown>
+          <li *ngFor="let NBC of NavBarCategories">
+            <nav-nav-dropdown [Category]="NBC"></nav-nav-dropdown>
           </li>           
         </ul>
       </div>

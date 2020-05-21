@@ -1,11 +1,37 @@
-<div [ngSwitch]="Category">
+<div class="dropdown" >
+  <button class="nav-link dropdown-toggle text-dark" id="DropDownMenu" data-toggle="dropdown">
+    {{Category.name}}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="DropDownMenu">
+    <li *ngFor="let item of Category.dropDownItem">
+      <div *ngIf="isValid;else nestedDropDown">
+        <a class="nav-link text-dark">{{item.name}}</a>
+      </div>
+      <ng-template #nestedDropDown>
+        <nav-nav-dropdown [Category]="item"></nav-nav-dropdown>
+      </ng-template>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div [ngSwitch]="Category">
   <div class="dropdown" *ngSwitchCase="CatEnum.Industries">
     <button class="nav-link dropdown-toggle text-dark" id="IndustryDropDown" data-toggle="dropdown">
       Industries
     </button>
     <ul class="dropdown-menu" aria-labelledby="IndustryDropDown">
       <li *ngFor="let IndustryItem of IndustriesItemsPaceholder">
-        <a>{{IndustryItem}}</a>
+        <a></a>
       </li>
     </ul>
   </div>
@@ -21,5 +47,5 @@
   <div *ngSwitchCase="CatEnum.Support">
     <a class="nav-link text-dark">Support</a>
   </div>
-</div>
+</div>-->
 
